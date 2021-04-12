@@ -5,3 +5,8 @@
         <%= link_to event.title, event_path(event) %>
     </div>
 <% end %>
+
+<h4>Future Events</h4>
+<% @events.future.each do |future_event| %>
+    <p><%= future_event.title %></p>
+<% end %>

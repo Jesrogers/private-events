@@ -1,7 +1,13 @@
 <h1>Profile for <%= @user.username %></h1>
 
+<h4>Created Events</h4>
 <% @user.created_events.each do |event |%>
     <div>
         <%= link_to event.title, event_path(event) %>
     </div>
+<% end %>
+
+<h4>Events you're attending</h4>
+<% @user.attended_events.each do |attended_event| %>
+    <p><%= attended_event.title %></p>
 <% end %>

@@ -2,7 +2,6 @@
 
 <% @user.created_events.each do |event |%>
     <div>
-        <p><%= event.title %></p>
-        <p><%= event.description %></p>
+        <%= link_to event.title, event_path(event) %>
     </div>
 <% end %>

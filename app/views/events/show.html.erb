@@ -1,0 +1,3 @@
+<h1><%= @event.title %></h1>
+<p>Description: <%= @event.description %></p>
+<p>Creator: <%= link_to @event.creator.username, user_path(@event.creator) %></p>
